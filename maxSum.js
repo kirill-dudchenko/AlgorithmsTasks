@@ -1,50 +1,3 @@
-// SCR 1
-
-let list = {
-    one: 1,
-    two: 2,
-    three: 3,
-    four: 4,
-    five: 5,
-}
-
-const solution1 = (D, S) => {
-    return D * list[S];
-}
-
-// console.log(solution1(2, 'four')) // 8
-
-// SCR 2
-
-const solution2 = (N) => {
-    
-    const sumOfDigits = (N) => {
-        let sumOfDigits = 0;
-        while (N) {
-            sumOfDigits += N % 10;
-            N = Math.floor(N / 10);
-        }
-        return sumOfDigits;
-    }
-    
-    let target = sumOfDigits(N);
-    let result = ++N;
-
-    while (sumOfDigits(result) !== target) {
-        result++
-    }
-
-    return result;
-
-}
-
-// console.log(solution2(28))   // 37
-// console.log(solution2(734))  // 743
-// console.log(solution2(1990)) // 2089
-// console.log(solution2(1000)) // 10000
-
-// MaxSum
-
 const solution3 = (arr) => {
 
     const sumOfDigits = (number) => { // returns sum of digits of the number (51 => 6)
@@ -82,5 +35,3 @@ const solution3 = (arr) => {
 console.log(solution3([51, 71, 17, 42])) // 93
 console.log(solution3([42, 33, 60])) // 102
 console.log(solution3([51, 32, 43])) // -1
-
-
