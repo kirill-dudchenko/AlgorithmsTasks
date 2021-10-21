@@ -10,11 +10,10 @@
 
 const solution = (string, cost) => {
 
-    let charArray = string.split("");
     let result = 0;
 
-    for (let i = 0; i < charArray.length; i++) {
-        if (charArray[i] === charArray[i + 1]) {
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === string[i + 1]) {
             result += cost[i]
         }
     }
@@ -26,4 +25,5 @@ const solution = (string, cost) => {
 console.log(solution('abccbd', [0, 1, 2, 3, 4, 5])); // 2
 console.log(solution('aabbcc', [1, 2, 1, 2, 1, 2])); // 3
 console.log(solution('aaaa', [3, 4, 5, 6])); // 12
+console.log(solution('ababa', [10, 5, 10, 5, 10])); // 0
 
