@@ -1,3 +1,8 @@
+// Given an array of integers, return an array, where the first element
+// is the count of positive numbers and the second element is sum of 
+// negative numbers.
+
+
 // WITHOUT REDUCE
 
 const solution1 = (arr) => {

@@ -1,3 +1,15 @@
+// Write a function, that given an array consisting of N integers, 
+// returns the maximum sum of two numbers whose digits add up to an equal sum.
+// If there are no two numbers whose digits add up to an equal sum, the 
+// function should return -1;
+
+// [51, 71, 17, 42]
+// [5+1, 7+1, 1+7, 4+2]
+// [6, 8, 8, 6]
+// [51, 42] > [71, 17]
+// 51 + 42 = 93
+// return 93;
+
 const solution3 = (arr) => {
 
     const sumOfDigits = (number) => { // returns sum of digits of the number (51 => 6)
